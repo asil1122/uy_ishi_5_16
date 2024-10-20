@@ -5,25 +5,30 @@ import logo from "../../assets/logo.svg"
 import { Link } from 'react-router-dom'
 import { LinkBtn } from '../../style/style'
 
+
 export const Header = () => {
+
+    
     return (
         <Container sx={{ pt: '69px', pb: '69px' }} maxWidth="xs">
             <Stack direction={"row"} justifyContent={"space-between"} alignItems={"center"}>
                 <Stack direction={"row"} gap={'150px'} alignItems={"center"}>
                     <Stack>
-                        <img src={logo} alt="logo" />
+                        <LinkBtn to={"/"}>
+                            <img src={logo} alt="logo" />
+                        </LinkBtn>
                     </Stack>
                     <Stack direction={'row'} gap={'40px'}>
                         <LinkBtn to="/">
                             <Typography variant='body2'>Home</Typography>
                         </LinkBtn>
-                        <LinkBtn >
+                        <LinkBtn to={"/about"}>
                             <Typography variant='body2'>About</Typography>
                         </LinkBtn>
                         <LinkBtn>
                             <Typography variant='body2'>Pages</Typography>
                         </LinkBtn>
-                        <LinkBtn >
+                        <LinkBtn to={"/shop"}>
                             <Typography variant='body2'>Shop</Typography>
                         </LinkBtn>
                         <LinkBtn>

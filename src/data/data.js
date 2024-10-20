@@ -10,6 +10,18 @@ import offer_img1 from "../assets/offer_img1.png";
 import offer_img2 from "../assets/offer_img2.png";
 import offer_img3 from "../assets/offer_img3.png";
 import offer_img4 from "../assets/offer_img4.png";
+import service_img1 from "../assets/service_img1.svg";
+import service_img2 from "../assets/service_img2.svg";
+import service_img3 from '../assets/service_img3.svg'
+import service_img4 from '../assets/service_img4.svg'
+import about_img1 from '../assets/about_img1.png'
+import about_img2 from '../assets/about_img2.png'
+import about_img3 from '../assets/about_img3.png'
+import about_img4 from '../assets/about_img4.png'
+import item_img9 from '../assets/item_img9.png'
+import item_img10 from '../assets/item_img10.png'
+import item_img11 from '../assets/item_img11.png'
+import item_img12 from '../assets/item_img12.png'
 
 export const Data1 = [
   {
@@ -84,11 +96,44 @@ export const Data1 = [
     NewPrice: "15.00",
     rating: 5,
   },
-];
-
-export const offerData =[
   {
-    id: 1,
+    id: 9,
+    img: item_img9,
+    badge: 'Health',
+    title: "Mung Bean",
+    OldPrice: "20.00",
+    NewPrice: "11.00",
+    rating: 3,
+  },
+  {
+    id: 10,
+    img: item_img10,
+    badge: 'Nuts',
+    title: "White Hazelnut",
+    OldPrice: "20.00",
+    NewPrice: "12.00",
+    rating: 3,
+  },
+  {
+    id: 11,
+    img: item_img11,
+    badge: 'Fresh',
+    title: "Fresh Corn",
+    OldPrice: "20.00",
+    NewPrice: "17.00",
+    rating: 2,
+  },
+  {
+    id: 12,
+    img: item_img12,
+    badge: 'Fresh',
+    title: "Organic Almonds",
+    OldPrice: "20.00",
+    NewPrice: "15.00",
+    rating: 4,
+  },
+  {
+    id: 13,
     img: offer_img1,
     badge: 'Vegetable',
     title: 'Mung Bean',
@@ -97,7 +142,7 @@ export const offerData =[
     rating: 3,
   },
   {
-    id: 2,
+    id: 14,
     img: offer_img2,
     badge: 'Vegetable',
     title: 'Brown Hazelnut',
@@ -106,7 +151,7 @@ export const offerData =[
     rating: 3,
   },
   {
-    id: 3,
+    id: 15,
     img: offer_img3,
     badge: 'Vegetable',
     title: 'Onion',
@@ -115,7 +160,7 @@ export const offerData =[
     rating: 3,
   },
   {
-    id: 4,
+    id: 16,
     img: offer_img4,
     badge: 'Vegetable',
     title: 'Cabbage',
@@ -123,7 +168,8 @@ export const offerData =[
     NewPrice: '$17.00',
     rating: 3,
   }
-]
+];
+
 
 export const Customers= [
   {
@@ -148,3 +194,52 @@ export const Customers= [
   },
 ]
 
+export const serviceData = [
+  {
+    id: 1,
+    img: service_img1,
+    title: 'Return Policy',
+    text: 'Simply dummy text of the printintypesetting industry.'
+  },
+  {
+    id: 2,
+    img: service_img2,
+    title: '100% Fresh',
+    text: 'Simply dummy text of the printintypesetting industry.'
+  },
+  {
+    id: 3,
+    img: service_img3,
+    title: 'Support 24/7',
+    text: 'Simply dummy text of the printintypesetting industry.'
+  },
+  {
+    id: 4,
+    img: service_img4,
+    title: 'Secured Payment',
+    text: 'Simply dummy text of the printintypesetting industry.'
+  },
+]
+
+export const AboutData =[
+  {
+    id: 1,
+    img: about_img1,
+    title: 'Spicy'
+  },
+  {
+    id: 2,
+    img: about_img2,
+    title: 'Nuts & Feesd'
+  },
+  {
+    id: 3,
+    img: about_img3,
+    title: 'Fruits'
+  },
+  {
+    id: 4,
+    img: about_img4,
+    title: 'Vegetable'
+  },
+]

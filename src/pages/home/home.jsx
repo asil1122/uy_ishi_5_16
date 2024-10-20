@@ -8,13 +8,12 @@ import { Organic } from '../../assets/icons/organic'
 import { Qualty } from '../../assets/icons/qualty'
 import farm from "../../assets/farm_img.png"
 import { Next } from '../../assets/icons/next'
-import { Customers, Data1, offerData } from '../../data/data'
+import { Customers, Data1 } from '../../data/data'
 import { Homecard } from '../../components/home-card'
 import costumer from "../../assets/costumer_bg.png"
 import woman from "../../assets/woman.png"
 import { CustomersCard } from '../../components/customers-card'
-import { CustomBox, CustomButton } from '../../style/style'
-import { OfferCard } from '../../components/offer-card'
+import { CustomBox, CustomButton, LinkBtn } from '../../style/style'
 import econis from "../../assets/econis.png"
 import catagory_img1 from "../../assets/catagory_img1.png"
 import catagory_img2 from "../../assets/catagory_img2.png"
@@ -22,8 +21,10 @@ import catagory_img3 from "../../assets/catagory_img3.png"
 import content_img1 from "../../assets/content_img1.png"
 import content_img2 from "../../assets/content_img2.png"
 import { Profile } from '../../assets/icons/profile'
+import { Link } from 'react-router-dom'
 
 export const Home = () => {
+
     return (
         <>
             <Banner />
@@ -103,9 +104,11 @@ export const Home = () => {
                         <Typography mb={'8px'} textAlign={'center'} fontWeight={400} color={colors.secondary} fontFamily={'Yellowtail'} variant='h4'>Categories</Typography>
                         <Typography mb={'40px'} textAlign={'center'} color={colors.primary} variant='h2'>Our Products</Typography>
                         <Grid2 container spacing={'20px'}>
-                            {Data1.map((item) => (
+                            {Data1.slice(0,8).map((item) => (
                                 <Grid2 size={3} key={item.id} >
-                                    <Homecard {...item} />
+                                    <LinkBtn to={`/detail/${item.id}`} >
+                                        <Homecard {...item} />
+                                    </LinkBtn>
                                 </Grid2>
                             ))}
                         </Grid2>
@@ -154,9 +157,11 @@ export const Home = () => {
                             </Box>
                         </Stack>
                         <Grid2 container spacing={'20px'}>
-                            {offerData.map((item) => (
+                            {Data1.slice(12,16).map((item) => (
                                 <Grid2 size={3} key={item.id}>
-                                    <OfferCard {...item} />
+                                    <LinkBtn to={`/detail/${item.id}`}>
+                                        <Homecard {...item} />
+                                    </LinkBtn>
                                 </Grid2>
                             ))}
                         </Grid2>
@@ -164,12 +169,12 @@ export const Home = () => {
                 </Container>
             </Box>
             <Box>
-                <Stack position={"relative"} direction={'row'} justifyContent={'center'} alignItems={'center'}>
-                    <Stack width={"50%"}>
-                        <img  width={'958px'} src={econis} alt="img" />
+                <Stack justifyContent={'center'} direction={'row'}  alignItems={'center'}>
+                    <Stack width={'958px'}>
+                        <img  src={econis} alt="img" />
                     </Stack>
                     <Stack position={'relative'} width={"50%"}>
-                        <Stack position={'absolute'} bottom={'-360px'} left={'-20px'} maxWidth={'789px'} sx={{ pl: '65px', pt: '78px', pb: '77px', pr: '89px' }} borderRadius={'30px'} bgcolor='#fff'>
+                        <Stack position={'absolute'} top={'50%'} left={'-100px'} maxWidth={'789px'} sx={{ pl: '65px', pt: '78px', pb: '77px', pr: '89px',transform: 'translateY(-50%)' }} borderRadius={'30px'} bgcolor='#fff'>
                             <Typography color={colors.secondary} fontFamily={"Yellowtail"} fontWeight={700} variant='body1'>Eco Friendly</Typography>
                             <Typography color={colors.primary} mb={'35px'} variant='h2'>Econis is a Friendly
                                 Organic Store</Typography>
